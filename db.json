@@ -1,0 +1,74 @@
+{
+  "karakter": [
+    {
+      "id": 1,
+      "charName": "Thorsten",
+      "charKE": 33,
+      "charTE": 75,
+      "charVE": 137,
+      "charFP": 60,
+      "charEP": 8,
+      "charSFE": 2
+    },
+    {
+      "id": 2,
+      "charName": "Leon",
+      "charKE": 33,
+      "charTE": 55,
+      "charVE": 104,
+      "charFP": 16,
+      "charEP": 8,
+      "charSFE": 3
+    },
+    {
+      "id": 3,
+      "charName": "Ali",
+      "charKE": 43,
+      "charTE": 75,
+      "charVE": 154,
+      "charFP": 56,
+      "charEP": 18,
+      "charSFE": 5
+    },
+    {
+      "id": 4,
+      "charName": "Balint",
+      "charKE": 43,
+      "charTE": 75,
+      "charVE": 154,
+      "charFP": 56,
+      "charEP": 18,
+      "charSFE": 5
+    },
+    {
+      "id": 5,
+      "charName": "Usgard",
+      "charKE": 43,
+      "charTE": 75,
+      "charVE": 154,
+      "charFP": 56,
+      "charEP": 18,
+      "charSFE": 5
+    },
+    {
+      "id": 6,
+      "charName": "Alex",
+      "charKE": 43,
+      "charTE": 75,
+      "charVE": 154,
+      "charFP": 56,
+      "charEP": 18,
+      "charSFE": 5
+    },
+    {
+      "charName": "Jani",
+      "charKE": "4",
+      "charTE": "5",
+      "charVE": "6",
+      "charFP": "4",
+      "charEP": "7",
+      "charSFE": "3",
+      "id": 7
+    }
+  ]
+}

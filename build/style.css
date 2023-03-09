@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap');
+
+body {
+    background-color: grey;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.wrapper {
+    display: grid;
+    grid-row: 1;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn {
+    height: 70px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightgrey;
+    font-size: 30px;
+    font-weight: 550;
+}
+
+.btn:hover{
+    box-shadow: 0px 15px 20px -10px black;
+    filter: brightness(110%);
+}
+
+.score {
+    /* color: rgb(149, 211, 238); Ezt kulon is definialtad minden gombnal, de backupnak jo */
+    font-weight: 900;
+    font-size: 40px;
+    
+}
+
+.item {
+    display: grid;
+}
+
+
+#score4, #button4 {
+    color: red;
+    text-shadow: 2px 2px 2px black;
+} 
+#score6, #button6 {
+    color: orange;
+    text-shadow: 2px 2px 2px black;
+} 
+#score8, #button8 {
+    color: yellow;
+    text-shadow: 2px 2px 2px black;
+} 
+#score10, #button10 {
+    color: green;
+    text-shadow: 2px 2px 2px black;
+} 
+#score12, #button12 {
+    color: blue;
+    text-shadow: 2px 2px 2px black;
+} 
+#score20, #button20 {
+    color: indigo;
+    text-shadow: 2px 2px 2px black;
+} 
+
+@media (max-width: 450px) {
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .wrapper {
+        gap: 5px;
+    }
+
+    .btn {
+        height: 100px;
+        font-size: 50px;
+    }
+
+    .score {
+        font-size: 20px;
+    }
+
+    .btn {
+        display: grid;
+    }
+} 

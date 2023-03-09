@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magus kockadobás</title>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="stilus.css"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!-- navigacios menu -->
+	<nav class="navbar navbar-expand-lg bg-secondary navbar-dark bg-clip-padding">
+        <div class="container">
+             <a href="#" class="navbar-brand">Magus kockadobo</a>
+             <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+
+             <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                   <li class="nav-link">
+                    <a href="#piciDobo" class="nav-link text-warning">Dobasokhoz</a>
+                   </li>     
+                   <li class="nav-link">
+                    <a href="#karakterValaszto" class="nav-link">Karaktervalaszto</a>
+                   </li>     
+                   <li class="nav-link">
+                    <a href="#CharacterIN" class="nav-link">Karakterfeltoltes</a>
+                   </li>    
+				   <li><a href="cards.html">Ez a dobo</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<h2>Kocka valaszto</h2>
+    <div class="wrapper" id="piciDobo">
+        <div class="item">
+            
+            <button class="btn" onclick="throwdice(4)">
+                <span id="button4">
+                    4 
+                </span>
+                faces
+            </button>  
+			<span id="score4" class="score">0</span>   
+        </div>
+
+        <div class="item">
+            
+            <button class="btn" onclick="throwdice(6)">
+                <span id="button6">
+                    6 
+                </span>
+                faces
+            </button>
+			<span id="score6" class="score">0</span>
+        </div>
+        <div class="item">
+            
+            <button class="btn" onclick="throwdice(8)">
+                <span id="button8">
+                    8 
+                </span>
+                faces
+            </button>
+			<span id="score8" class="score">0</span>
+        </div>
+
+        <div class="item">
+            <button class="btn" onclick="throwdice(10)">
+                <span id="button10">
+                    10 
+                </span>
+                faces
+            </button>
+            <span id="score10" class="score">0</span>
+        </div>
+        <div class="item">
+            <button class="btn" onclick="throwdice(12)">
+                <span id="button12">
+                    12 
+                </span>
+                faces
+            </button>
+            <span id="score12" class="score">0</span>
+        </div>
+        <div class="item">
+            <button class="btn" onclick="throwdice(20)">
+                <span id="button20">
+                    20 
+                </span>
+                faces    
+            </button>
+            <span id="score20"  class="score">0</span>
+        </div>        
+    </div>
+   
+	<!-- Karakter betolto -->
+	<section id="instructors" class="p-5 bg-dark">
+		<div class="container">
+			<h2 class="text-center text-light">Valaszd ki a betoltendo karaktert</h2>
+			<p class="lead text-center text-white mb-2 p-3">
+				Legorgetve tudsz valasztani az adatbazisbol
+			</p>
+
+			<select class="md-2 p-2" id="karakterValaszto">
+				<option id="">Itt lesznek a karik</option> <option id="">Itt lesznek a karik</option>
+			</select>
+			<select class="md-2 p-2" id="karakterValaszto">
+				<option id="">Itt lesznek a karik2</option> <option id="">Itt lesznek a karik</option>
+			</select>
+			<!-- kartya1 -->
+			<div class="row g-4 p-2">
+				<div class="col-md-6 col-lg-3">
+					<div class="card bg-success">
+						<div class="card-body text-center">
+							<!-- <img src="img/thorsten.jpg" alt="" class="rounded-circle mb-3 "> -->
+							
+							<h4 class="card-title mb-3 p-2 text-light">Karakter 1 Jobb</h4>
+							
+								<label for="KE">KE:<span id="KEErtek"></span></label>
+								<input type="number" id="KE" name="KE"><br>
+
+								<label for="TE">TE:<span id="TEErtek"></span></label>
+								<input type="number" id="TE" name="TE"><br>
+								<label for="VE">SP:<span id="VEErtek"></span></label>
+								<input type="number" id="SP" name="VE"><br>
+
+						</div>
+					</div>
+				</div>
+				<!-- kartya1b -->
+				<div class="col-md-6 col-lg-3">
+					<div class="card bg-light">
+						<div class="card-body text-center">
+							<!-- <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="" class="rounded-circle mb-3"> -->
+							<h3 class="card-title mb-3">Bal kez</h3>						
+							<h3></h3>
+				
+							<label for="EP">KEB:<span id="EPErtek"></span></label>
+							<input type="number" id="KEB" name="EP"><br>
+		
+							<label for="FP">TEB:<span id="FPErtek"></span></label>
+							<input type="number" id="TEB" name="FP"><br>
+							
+							<label for="SFE">SPB:<span id="SFEErtek"></span></label>
+							<input type="number" id="SPB" name="SFE"> <br>
+							</form>
+						</div>
+					</div>
+				</div>    
+
+				<!-- kartya2j -->
+			
+				<div class="col-md-6 col-lg-3">
+					<div class="card bg-success">
+						<div class="card-body text-center">
+							<!-- <img src="img/thorsten.jpg" alt="" class="rounded-circle mb-3 "> -->
+							
+							<h4 class="card-title mb-3 p-2 text-light">Karakter 2 Jobb</h4>
+							
+								<label for="KE">KE:<span id="KEErtek"></span></label>
+								<input type="number" id="KE" name="KE"><br>
+
+								<label for="TE">TE:<span id="TEErtek"></span></label>
+								<input type="number" id="TE" name="TE"><br>
+								<label for="VE">SP:<span id="VEErtek"></span></label>
+								<input type="number" id="SP" name="VE"><br>
+
+						</div>
+					</div>
+				</div>
+			  
+				<!-- kartya2b -->
+				
+				<div class="col-md-6 col-lg-3">
+					<div class="card bg-light">
+						<div class="card-body text-center">
+							<!-- <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="" class="rounded-circle mb-3"> -->
+							<h3 class="card-title mb-3">Bal kez</h3>						
+							<h3></h3>
+				
+							<label for="EP">KEB:<span id="EPErtek"></span></label>
+							<input type="number" id="KEB" name="EP"><br>
+		
+							<label for="FP">TEB:<span id="FPErtek"></span></label>
+							<input type="number" id="TEB" name="FP"><br>
+							
+							<label for="SFE">SPB:<span id="SFEErtek"></span></label>
+							<input type="number" id="SPB" name="SFE"> <br>
+							</form>
+						</div>
+					</div>
+				</div>    
+			
+			</div>
+		</div>  	
+	</section>
+
+	<!-- akcio gombok eredmenyek -->
+ 
+	<section class="bg-success g-md-5 p-5" >
+	<button class="bg-dark text-light btn-lg" id="dobasGomb">Dobás</button>  
+	<button id="mutatGomb">Mutat</button>  
+	<button id="charBetolt">Karakter betoltes</button> 
+	<button type="submit" id="chuck">Chuck Noris mit mondana erre</button>  
+		<button id="egykari">random kari</button>
+		
+
+	<h4 class="text-warning p-3">A dobott ertekek itt jelennek meg</h4>
+
+	<div class="bg-warning text-dark text-centered">
+		<p id="eredmeny"></p> 
+		<p id="egykar"></p> <p id="eredmeny3K6"></p>    
+		<p id="charMutat"></p>  
+		<p id="charBetoltott"></p> 
+	</div>
+
+	</section>
+
+
+
+			<!-- Karakter feltolto -->
+           <h3>Itt tudod feltolteni a karaktered ertekeit</h3>
+		   <div class="row justify-content-center g-4 p-2">
+		   		<div class="col col-lg-3 col-sm-9">
+			   		<div class="card bg-success ">
+				   		<div class="card-body text-center">
+		 
+		  							<!-- <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="" class="rounded-circle mb-3"> -->
+							<h6 class="card-title mb-3">Itt tudod bevinni a karaktered az adatbazisba</h6>						
+							
+							<form id="CharacterIN" action="submit" class="p-2"></form>
+	
+							<div id="feltolto">
+								<input type="text" name="" id='charName' placeholder="Neve">
+								<input type="number" id="charKE" placeholder="KE ertek">
+								<input type="number" id="charTE" placeholder="TE ertek">
+								<input type="number" id="charVE" placeholder="VE ertek">
+								<input type="number" id="charEP" placeholder="EP ertek">
+								<input type="number" id="charFP" placeholder="FP ertek">
+								<input type="number" id="charSFE" placeholder="SFE ertek">
+							
+								
+							</div>
+							<button type="submit" id="feltoltGomb" class="m-2">Feltolt</button>
+							</form>
+						</div>
+					</div>
+				</div>   
+			</div>	
+	
+	<script src="kockadobas.js"></script>
+    <script src="app.js"></script>
+    <script src="easyhttp1.js"></script>
+
+</body>
+</html>
+<!--  
+    <button id="dobas2K6">Dobás 2K6</button>  <button id="dobas2K10">Dobás 2K10</button>  
+    <br>
+    <button id="dobas3K6">Dobás 3K6</button> <button id="dobasK5">Dobás K5</button> -->
+
+			<!-- <div class="card">
+				<h2>Harry Potter</h2>
+				<img src="https://via.placeholder.com/150" alt="Harry Potter">
+				<p>Harry James Potter is the main character in the Harry Potter series of novels written by J.K. Rowling.</p>
+				<ul>
+					<li>Born: July 31, 1980</li>
+					<li>House: Gryffindor</li>
+					<li>Wand: Holly, 11 inches, phoenix feather core</li>
+					<li>Patronus: Stag</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>Hermione Granger</h2>
+				<img src="https://via.placeholder.com/150" alt="Hermione Granger">
+				<p>Hermione Jean Granger is a fictional character in the Harry Potter series of novels written by J.K. Rowling.</p>
+				<ul>
+					<li>Born: September 19, 1979</li>
+					<li>House: Gryffindor</li>
+					<li>Wand: Vine, 10¾ inches, dragon heartstring core</li>
+					<li>Patronus: Otter</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>Ron Weasley</h2>
+				<img src="https://via.placeholder.com/150" alt="Ron Weasley">
+				<p>Ronald Bilius Weasley is a fictional character in the Harry Potter series of novels written by J.K. Rowling.</p>
+				<ul>
+					<li>Born: March 1, 1980</li>
+					<li>House: Gryffindor</li>
+					<li>Wand: Willow, 14 inches, unicorn hair core</li>
+					<li>Patronus: Jack Russell Terrier</li>
+				</ul>
+			</div>
+		
+		 -->
+
+<!-- 
+		<div class="card">
+			<h2>Harry Potter</h2>
+			<img src="https://via.placeholder.com/150" alt="Harry Potter">
+			<p>Harry James Potter is the main character in the Harry Potter series of novels written by J.K. Rowling.</p>
+		</div>
+		<div class="card">
+			<h2>Hermione Granger</h2>
+			<img src="https://via.placeholder.com/150" alt="Hermione Granger">
+			<p>Hermione Jean Granger is a fictional character in the Harry Potter series of novels written by J.K. Rowling.</p>
+		</div>
+		<div class="card">
+			<h2>Ron Weasley</h2>
+			<img src="https://via.placeholder.com/150" alt="Ron Weasley">
+			<p>Ronald Bilius Weasley is a fictional character in the Harry Potter series of novels written by J.K. Rowling.</p>
+		</div> -->
+	
+<!-- <h3 class="py-2">Valaszd ki a betoltendo karaktert</h3>
+	
+	<div class="container">
+		<div class="row">
+				<div class="col-auto ">
+			
+					<label for="nev">Név:</label>
+					<input type="text" id="nev" name="nev"><br>
+
+					<label for="KE">KE:</label>
+					<input type="number" id="KE" name="KE"><span id="KEErtek"></span><br>
+
+					<label for="TE">TE:</label>
+					<input type="number" id="TE" name="TE"><span id="TEErtek"></span><br>
+					<label for="VE">SP:</label>
+					<input type="number" id="SP" name="VE"><span id="VEErtek"></span><br>
+				</div>
+				<div class="col offset-2">
+					<h3>Bal kez</h3>
+				
+					<label for="EP">KEB:</label>
+					<input type="number" id="KEB" name="EP"><span id="EPErtek"></span><br>
+
+					<label for="FP">TEB:</label>
+					<input type="number" id="TEB" name="FP"><span id="FPErtek"></span><br>
+					
+					<label for="SFE">SPB:</label>
+					<input type="number" id="SPB" name="SFE"> <span id="SFEErtek"></span><br>
+					</form>
+									
+				</div>
+		
+	</div>-->
